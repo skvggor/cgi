@@ -13,7 +13,7 @@ def sum(x, y):
     return 'Resultado da soma entre ' + \
             parameter['x'] + ' e ' + \
             parameter['y'] + ' é ' + \
-            str(x+y)
+            str(x+y) + '.'
 
 def basicHtml(title, content):
     print "Content-type: text/html\n"
