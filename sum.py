@@ -20,14 +20,14 @@ def basicHtml(title, content):
     print """
         <!doctype html>
         <html>
-            <meta charset="utf-8" />
             <head>
+                <meta charset="utf-8" />
                 <title>%s</title>
             </head>
             <body>
                 <div class="result">
                     <h1>%s</h1>
-                <div>
+                </div>
             </body>
         </html>
     """ % (title, content)
