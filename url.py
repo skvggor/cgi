@@ -6,7 +6,7 @@ import cgi
 def urlParameter():
     form = cgi.FieldStorage()
     
-    if form.getvalue('username') != None:
+    if form.getvalue('username'):
         return str(form.getvalue('username') + '.')
     else:
         return 'Sem nome.'
