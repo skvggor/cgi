@@ -22,12 +22,12 @@ sub executarSoma {
     );
 
     for ($i = 0; $i < scalar(@valores); $i += 1) {
-        $i % 2 == 0 ? push(@indexPares, @valores[$i]) : push(@indexImpares, @valores[$i]);
+        $i % 2 == 0 ? push(@indexPares, $valores[$i]) : push(@indexImpares, $valores[$i]);
     }
 
     for ($i = 0; $i < scalar(@indexPares); $i += 1) {
         print $i + 1, ") ";
-        soma(@indexPares[$i], @indexImpares[$i]);
+        soma($indexPares[$i], $indexImpares[$i]);
     }
 }
 executarSoma();
