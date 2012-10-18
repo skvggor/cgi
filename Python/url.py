@@ -4,15 +4,11 @@
 import cgi
 
 def urlParameter():
-    form = cgi.FieldStorage()
-    
-    if form.getvalue('username'):
-        return str(form.getvalue('username') + '.')
-    else:
-        return 'Sem nome.'
+    form = cgi.FieldStorage()    
+    return form.getvalue('username') or 'Sem nome'
 
 def basicHtml(title, content):
-    print "Content-type: text/html\n"
+    print "Content-type: text/html"
     print """
         <!doctype html>
         <html>
@@ -22,7 +18,7 @@ def basicHtml(title, content):
             </head>
             <body>
                 <div class="result">
-                    <h1>Olá, %s</h1>
+                    <h1>Olá, %s.</h1>
                 </div>
             </body>
         </html>
